@@ -1,0 +1,13 @@
+# OS X
+.DS_Store
+
+# tests
+__tests__/**/*.js
+coverage/
+
+# node modules
+node_modules
+package-lock.json
+
+# WebStorm
+.idea
