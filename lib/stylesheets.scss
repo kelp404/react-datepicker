@@ -1,0 +1,100 @@
+$text-color: #444;
+$text-highlight: #888;
+$text-disable: #eeeeee;
+$text-selected-bg: #d44950;
+$border-color: #aaa;
+$white-color: #eee;
+$navigation-hover-bg: #eee;
+
+.react-datepicker {
+  .hide {
+    display: none;
+  }
+  .calendar {
+    padding: 12px;
+    border: 1px $border-color solid;
+    min-width: 250px;
+    .navigation-zoom-out {
+      display: block;
+      text-align: center;
+      margin: 0 36px 0 36px;
+      line-height: 36px;
+      border-radius: 3px;
+      color: $text-color;
+      text-decoration: none;
+      &:hover {
+        background-color: $navigation-hover-bg;
+      }
+    }
+    .navigation-previous {
+      display: inline-block;
+      float: left;
+      &:hover {
+        .triangle {
+          border-color: transparent $text-color transparent transparent;
+        }
+      }
+      .triangle {
+        margin: 12px;
+        padding: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 12px 6px 0;
+        border-color: transparent $text-highlight transparent transparent;
+      }
+    }
+    .navigation-next {
+      display: inline-block;
+      float: right;
+      &:hover {
+        .triangle {
+          border-color: transparent transparent transparent $text-color;
+        }
+      }
+      .triangle {
+        margin: 12px;
+        padding: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 0 6px 12px;
+        border-color: transparent transparent transparent $text-highlight;
+      }
+    }
+    table {
+      clear: both;
+      width: 100%;
+      margin-top: 5px;
+      th, td {
+        text-align: center;
+        min-width: 32px;
+        font-size: 0.9em;
+      }
+      td {
+        a {
+          font-size: 0.8em;
+          color: $text-color;
+          display: inline-block;
+          width: 34px;
+          line-height: 34px;
+          text-decoration: none;
+          border-radius: 99em;
+        }
+        &.is-not-display-month {
+          a {
+            color: $text-disable;
+          }
+        }
+      }
+      td > a:hover {
+        color: $white-color;
+        background-color: $text-highlight;
+      }
+      td.active > a {
+        color: $white-color;
+        background-color: $text-selected-bg;
+      }
+    }
+  }
+}
