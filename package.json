@@ -30,8 +30,12 @@
     "babel-preset-react": "6.24.1",
     "concurrently": "4.1.0",
     "config": "3.0.1",
+    "css-loader": "2.1.1",
     "express": "4.16.4",
+    "node-sass": "4.11.0",
     "nodemon": "1.18.10",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
     "webpack": "4.29.6",
     "webpack-cli": "3.3.0",
     "webpack-dev-server": "3.2.1"
