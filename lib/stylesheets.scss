@@ -13,7 +13,7 @@ $navigation-hover-bg: #eee;
   .calendar {
     padding: 12px;
     border: 1px $border-color solid;
-    min-width: 250px;
+    width: 300px;
     .navigation-zoom-out {
       display: block;
       text-align: center;
@@ -85,6 +85,12 @@ $navigation-hover-bg: #eee;
           a {
             color: $text-disable;
           }
+        }
+      }
+      &.YEAR, &.TEN_YEARS {
+        td a {
+          width: 52px;
+          line-height: 52px;
         }
       }
       td > a:hover {
