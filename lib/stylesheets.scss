@@ -1,29 +1,33 @@
-$text-color: #444;
-$text-highlight: #888;
-$text-disable: #eeeeee;
-$text-selected-bg: #d44950;
-$border-color: #aaa;
-$white-color: #eee;
-$navigation-hover-bg: #eee;
+$datepicker-text-color: #444 !default;
+$datepicker-text-highlight: #888 !default;;
+$datepicker-text-disable: #eeeeee !default;;
+$datepicker-text-selected-bg: #d44950 !default;;
+$datepicker-border-color: #aaa !default;;
+$datepicker-white-color: #eee !default;;
+$datepicker-navigation-hover-bg: #eee !default;;
 
 .react-datepicker {
   .hide {
     display: none;
   }
   .calendar {
+    margin-top: 5px;
     padding: 12px;
-    border: 1px $border-color solid;
+    border: 1px $datepicker-border-color solid;
     width: 300px;
+    position: absolute;
+    z-index: 999;
+    background-color: #fff;
     .navigation-zoom-out {
       display: block;
       text-align: center;
       margin: 0 36px 0 36px;
       line-height: 36px;
       border-radius: 3px;
-      color: $text-color;
+      color: $datepicker-text-color;
       text-decoration: none;
       &:hover {
-        background-color: $navigation-hover-bg;
+        background-color: $datepicker-navigation-hover-bg;
       }
     }
     .navigation-previous {
@@ -31,7 +35,7 @@ $navigation-hover-bg: #eee;
       float: left;
       &:hover {
         .triangle {
-          border-color: transparent $text-color transparent transparent;
+          border-color: transparent $datepicker-text-color transparent transparent;
         }
       }
       .triangle {
@@ -41,7 +45,7 @@ $navigation-hover-bg: #eee;
         height: 0;
         border-style: solid;
         border-width: 6px 12px 6px 0;
-        border-color: transparent $text-highlight transparent transparent;
+        border-color: transparent $datepicker-text-highlight transparent transparent;
       }
     }
     .navigation-next {
@@ -49,7 +53,7 @@ $navigation-hover-bg: #eee;
       float: right;
       &:hover {
         .triangle {
-          border-color: transparent transparent transparent $text-color;
+          border-color: transparent transparent transparent $datepicker-text-color;
         }
       }
       .triangle {
@@ -59,7 +63,7 @@ $navigation-hover-bg: #eee;
         height: 0;
         border-style: solid;
         border-width: 6px 0 6px 12px;
-        border-color: transparent transparent transparent $text-highlight;
+        border-color: transparent transparent transparent $datepicker-text-highlight;
       }
     }
     table {
@@ -74,7 +78,7 @@ $navigation-hover-bg: #eee;
       td {
         a {
           font-size: 0.8em;
-          color: $text-color;
+          color: $datepicker-text-color;
           display: inline-block;
           width: 34px;
           line-height: 34px;
@@ -83,7 +87,7 @@ $navigation-hover-bg: #eee;
         }
         &.is-not-display-month {
           a {
-            color: $text-disable;
+            color: $datepicker-text-disable;
           }
         }
       }
@@ -94,12 +98,12 @@ $navigation-hover-bg: #eee;
         }
       }
       td > a:hover {
-        color: $white-color;
-        background-color: $text-highlight;
+        color: $datepicker-white-color;
+        background-color: $datepicker-text-highlight;
       }
       td.active > a {
-        color: $white-color;
-        background-color: $text-selected-bg;
+        color: $datepicker-white-color;
+        background-color: $datepicker-text-selected-bg;
       }
     }
   }
