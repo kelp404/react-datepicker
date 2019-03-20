@@ -47,7 +47,7 @@ class App extends React.Component {
               <h3>With default value "2019-03-01" and event "onSelect()".</h3>
               <hr/>
               <div className="row">
-                <div className="col-3">
+                <div className="col-md-3">
                   <form className="form-inline">
                     <div className="form-group">
                       <Datepicker date={this.state.defaultValue}
@@ -56,7 +56,7 @@ class App extends React.Component {
                     </div>
                   </form>
                 </div>
-                <div className="col-9">
+                <div className="col-md-9">
                   <div className="card">
                     <div className="card-body">
                       {this.state.events.map((event, index) => {
